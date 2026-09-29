@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createTotpCode, createTotpSecret, createTotpUri, verifyTotpCode } from "../worker/services/auth";
+import { createPasswordRecord, createTotpCode, createTotpSecret, createTotpUri, verifyPassword, verifyTotpCode } from "../worker/services/auth";
 
 describe("staff MFA", () => {
   it("matches the standard TOTP test vector", async () => {
@@ -20,5 +20,15 @@ describe("staff MFA", () => {
     expect(uri).toContain("otpauth://totp/");
     expect(uri).toContain("secret=JBSWY3DPEHPK3PXP");
     expect(uri).toContain("issuer=DIVASDRIP");
+  });
+});
+
+describe("staff passwords", () => {
+  it("hashes and verifies a password", async () => {
+    const { hash, salt } = await createPasswordRecord("correct horse battery staple");
+    expect(hash).toMatch(/^[0-9a-f]{64}$/);
+    expect(salt).toMatch(/^[0-9a-f]{32}$/);
+    expect(await verifyPassword("correct horse battery staple", salt, hash)).toBe(true);
+    expect(await verifyPassword("incorrect password", salt, hash)).toBe(false);
   });
 });

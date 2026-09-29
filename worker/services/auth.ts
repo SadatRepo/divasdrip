@@ -85,7 +85,7 @@ export function createTotpUri(email: string, secret: string) {
 
 async function derivePassword(password: string, salt: Uint8Array) {
   const baseKey = await crypto.subtle.importKey("raw", encoder.encode(password), "PBKDF2", false, ["deriveBits"]);
-  const bits = await crypto.subtle.deriveBits({ name: "PBKDF2", salt: salt as unknown as BufferSource, iterations: 120_000, hash: "SHA-256" }, baseKey, 256);
+  const bits = await crypto.subtle.deriveBits({ name: "PBKDF2", salt: salt as unknown as BufferSource, iterations: 100_000, hash: "SHA-256" }, baseKey, 256);
   return new Uint8Array(bits);
 }
 
