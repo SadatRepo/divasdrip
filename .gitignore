@@ -11,3 +11,4 @@ coverage/
 backups/
 
 test-artifacts/
+.vite/
