@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-store",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-25",
+  "triggers": { "crons": ["*/15 * * * *"] },
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-store-db",
+      "database_id": "replace-with-your-cloudflare-d1-database-id",
+      "migrations_dir": "db/migrations",
+      "migrations_pattern": "db/migrations/*.sql"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "IMAGES",
+      "bucket_name": "my-store-images"
+    }
+  ],
+  "vars": {
+    "ENVIRONMENT": "development",
+    "PUBLIC_TURNSTILE_SITE_KEY": "",
+    "MEDIA_PUBLIC_BASE_URL": ""
+  }
+}

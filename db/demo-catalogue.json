@@ -1,0 +1,297 @@
+[
+  {
+    "id": "sample-midnight-lace-maxi",
+    "name": "Midnight Lace Maxi",
+    "category": "full-length",
+    "images": [
+      {
+        "original": "0A3404E8-ED8F-4E5A-937A-C4071C6C87BC.png",
+        "path": "/images/catalog/midnight-lace-maxi-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-blue-bloom-maxi",
+    "name": "Blue Bloom Maxi",
+    "category": "full-length",
+    "images": [
+      {
+        "original": "16DC569D-C89A-4D0E-83F2-6D688D6998E9.png",
+        "path": "/images/catalog/blue-bloom-maxi-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-noir-slit-dress",
+    "name": "Noir Slit Dress",
+    "category": "full-length",
+    "images": [
+      {
+        "original": "16E12EB6-3244-479C-A036-56A904EB9643.png",
+        "path": "/images/catalog/noir-slit-dress-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-lace-panel-midi",
+    "name": "Lace Panel Midi",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "27E221D3-CCFB-4CC1-B837-DD699CA11EB4.png",
+        "path": "/images/catalog/lace-panel-midi-1.webp"
+      },
+      {
+        "original": "D68479D0-F958-419D-93D7-A5545558D591.png",
+        "path": "/images/catalog/lace-panel-midi-2.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-ruby-evening-midi",
+    "name": "Ruby Evening Midi",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "4CFA32F6-3C0F-49E6-AC48-36ACCB9074A0.png",
+        "path": "/images/catalog/ruby-evening-midi-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-crimson-occasion-gown",
+    "name": "Crimson Occasion Gown",
+    "category": "pre-order",
+    "images": [
+      {
+        "original": "562A9C09-253F-4649-96ED-413268113CD2.png",
+        "path": "/images/catalog/crimson-occasion-gown-1.webp"
+      },
+      {
+        "original": "IMG_5614.PNG",
+        "path": "/images/catalog/crimson-occasion-gown-2.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-pink-haze-dress",
+    "name": "Pink Haze Dress",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "71A13A9B-C8E7-4299-9F21-CD0D8C73B4B0.png",
+        "path": "/images/catalog/pink-haze-dress-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-blue-sky-shirt",
+    "name": "Blue Sky Shirt",
+    "category": "shirt",
+    "images": [
+      {
+        "original": "79758B9E-EFCA-4547-ACC5-78CB0A8EC264.png",
+        "path": "/images/catalog/blue-sky-shirt-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-plum-lace-maxi",
+    "name": "Plum Lace Maxi",
+    "category": "full-length",
+    "images": [
+      {
+        "original": "7DC18A0A-7C08-4C4F-B3D0-DDF9DC68653A.png",
+        "path": "/images/catalog/plum-lace-maxi-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-scarlet-long-sleeve-dress",
+    "name": "Scarlet Long Sleeve Dress",
+    "category": "full-length",
+    "images": [
+      {
+        "original": "83E6C0E2-7CF4-4341-81FD-EC789B1ED084.png",
+        "path": "/images/catalog/scarlet-long-sleeve-dress-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-midnight-sheer-dress",
+    "name": "Midnight Sheer Dress",
+    "category": "full-length",
+    "images": [
+      {
+        "original": "EAD201A6-5DFB-46A1-A450-987C023D66AD.png",
+        "path": "/images/catalog/midnight-sheer-dress-1.webp"
+      },
+      {
+        "original": "97FE09F8-5204-4523-AC9B-CAAE7F962672.png",
+        "path": "/images/catalog/midnight-sheer-dress-2.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-velvet-hour-midi",
+    "name": "Velvet Hour Midi",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "A480E835-DDC8-4E21-99A7-5E28F869A29E.png",
+        "path": "/images/catalog/velvet-hour-midi-1.webp"
+      },
+      {
+        "original": "B5E3165F-215C-4E59-96DA-1646C513C6F8.png",
+        "path": "/images/catalog/velvet-hour-midi-2.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-violet-bloom-dress",
+    "name": "Violet Bloom Dress",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "C32F2443-8F56-46CF-99DB-48F561DD6FF4.png",
+        "path": "/images/catalog/violet-bloom-dress-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-everyday-square-neck-top",
+    "name": "Everyday Square Neck Top",
+    "category": "tops",
+    "images": [
+      {
+        "original": "C362E703-D476-4D7B-8F40-33A603AE47E9.png",
+        "path": "/images/catalog/everyday-square-neck-top-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-soft-sand-set",
+    "name": "Soft Sand Set",
+    "category": "co-ord-set",
+    "images": [
+      {
+        "original": "C5BE91CC-CA1A-46D3-A989-564D5BAA3BEB.png",
+        "path": "/images/catalog/soft-sand-set-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-mocha-draped-top",
+    "name": "Mocha Draped Top",
+    "category": "tops",
+    "images": [
+      {
+        "original": "C6BFAD9B-353A-4471-83A2-07F60ABC5202.png",
+        "path": "/images/catalog/mocha-draped-top-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-ruby-drape-midi",
+    "name": "Ruby Drape Midi",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "E299DE37-A0BB-4C39-81C8-45455BB90F37.png",
+        "path": "/images/catalog/ruby-drape-midi-1.webp"
+      },
+      {
+        "original": "IMG_5611.PNG",
+        "path": "/images/catalog/ruby-drape-midi-2.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-cloud-zip-top",
+    "name": "Cloud Zip Top",
+    "category": "tops",
+    "images": [
+      {
+        "original": "IMG_2602.PNG",
+        "path": "/images/catalog/cloud-zip-top-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-off-duty-zip-top",
+    "name": "Off Duty Zip Top",
+    "category": "tops",
+    "images": [
+      {
+        "original": "IMG_2605.PNG",
+        "path": "/images/catalog/off-duty-zip-top-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-porcelain-print-set",
+    "name": "Porcelain Print Set",
+    "category": "co-ord-set",
+    "images": [
+      {
+        "original": "IMG_5606.PNG",
+        "path": "/images/catalog/porcelain-print-set-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-lilac-off-shoulder-dress",
+    "name": "Lilac Off Shoulder Dress",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "IMG_5608.PNG",
+        "path": "/images/catalog/lilac-off-shoulder-dress-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-twilight-occasion-dress",
+    "name": "Twilight Occasion Dress",
+    "category": "pre-order",
+    "images": [
+      {
+        "original": "IMG_5610.PNG",
+        "path": "/images/catalog/twilight-occasion-dress-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-noir-ruffle-mini",
+    "name": "Noir Ruffle Mini",
+    "category": "short-length",
+    "images": [
+      {
+        "original": "IMG_5617.PNG",
+        "path": "/images/catalog/noir-ruffle-mini-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-coastal-bloom-dress",
+    "name": "Coastal Bloom Dress",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "IMG_5623.PNG",
+        "path": "/images/catalog/coastal-bloom-dress-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "sample-rose-garden-dress",
+    "name": "Rose Garden Dress",
+    "category": "mid-length",
+    "images": [
+      {
+        "original": "IMG_7724.JPG",
+        "path": "/images/catalog/rose-garden-dress-1.webp"
+      }
+    ]
+  }
+]

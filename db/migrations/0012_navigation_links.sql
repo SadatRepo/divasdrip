@@ -1,0 +1,3 @@
+INSERT OR IGNORE INTO settings (key, value_json) VALUES
+  ('navigationLinks', '[{"label":"Shop","href":"/shop"},{"label":"Sale","href":"/shop?availability=sale"},{"label":"About","href":"/#about"}]'),
+  ('footerLinks', '[{"group":"Help","label":"FAQ","href":"/page/faq"},{"group":"Help","label":"Size guide","href":"/page/size-guide"},{"group":"Help","label":"Contact","href":"/page/contact"},{"group":"Policies","label":"Delivery","href":"/page/delivery"},{"group":"Policies","label":"Returns","href":"/page/returns"},{"group":"Policies","label":"Privacy","href":"/page/privacy"},{"group":"Policies","label":"Terms","href":"/page/terms"},{"group":"Shop","label":"All pieces","href":"/shop"},{"group":"Shop","label":"Track an order","href":"/tracking"}]');

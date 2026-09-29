@@ -1,0 +1,52 @@
+import { useState } from "react";
+import { AdminDashboard } from "./AdminDashboard";
+import { AdminLogin } from "./AdminLogin";
+import { AdminShell } from "./AdminShell";
+import { AuditManagement } from "./AuditManagement";
+import { CategoryManagement } from "./CategoryManagement";
+import { OrderManagement } from "./OrderManagement";
+import { OrderDetail } from "./OrderDetail";
+import { ManualOrderManagement } from "./ManualOrderManagement";
+import { ProductManagement } from "./ProductManagement";
+import { ProductEditor } from "./ProductEditor";
+import { CatalogImport } from "./CatalogImport";
+import { StaffManagement } from "./StaffManagement";
+import { InquiryManagement } from "./InquiryManagement";
+import { DeliveryManagement } from "./DeliveryManagement";
+import { InventoryManagement } from "./InventoryManagement";
+import { CollectionManagement } from "./CollectionManagement";
+import { MediaManagement } from "./MediaManagement";
+import { ContentManagement } from "./ContentManagement";
+import { PromotionManagement } from "./PromotionManagement";
+import { ReportManagement } from "./ReportManagement";
+import { SettingsManagement } from "./SettingsManagement";
+import { DiagnosticsManagement } from "./DiagnosticsManagement";
+import { canManageCollections, canManageContent, canManageDelivery, canManageInventory, canManageMedia, canManagePromotions, canManageSettings, canManageStaff, canViewDiagnostics } from "../lib/adminApi";
+import { hasAdminAuth } from "../lib/adminApi";
+
+export function AdminPage({ pathname }: { pathname: string }) {
+  const [authenticated, setAuthenticated] = useState(hasAdminAuth());
+  if (!authenticated) return <AdminLogin onAuthenticated={() => setAuthenticated(true)} />;
+  let content = <AdminDashboard />;
+  if (pathname === "/admin/products/import") content = <CatalogImport />;
+  else if (pathname.startsWith("/admin/products/")) content = <ProductEditor productId={pathname.slice("/admin/products/".length)} />;
+  else if (pathname === "/admin/products") content = <ProductManagement />;
+  else if (pathname === "/admin/categories") content = <CategoryManagement />;
+  else if (pathname === "/admin/orders/new") content = <ManualOrderManagement />;
+  else if (pathname.startsWith("/admin/orders/")) content = <OrderDetail orderId={pathname.slice("/admin/orders/".length)} />;
+  else if (pathname === "/admin/orders") content = <OrderManagement />;
+  else if (pathname === "/admin/reports") content = <ReportManagement />;
+  else if (pathname === "/admin/audit") content = <AuditManagement />;
+  else if (pathname === "/admin/staff" && canManageStaff()) content = <StaffManagement />;
+  else if (pathname === "/admin/inquiries") content = <InquiryManagement />;
+  else if (pathname === "/admin/delivery" && canManageDelivery()) content = <DeliveryManagement />;
+  else if (pathname === "/admin/inventory" && canManageInventory()) content = <InventoryManagement />;
+  else if (pathname === "/admin/collections" && canManageCollections()) content = <CollectionManagement />;
+  else if (pathname === "/admin/media" && canManageMedia()) content = <MediaManagement />;
+  else if (pathname === "/admin/content" && canManageContent()) content = <ContentManagement />;
+  else if (pathname === "/admin/promotions" && canManagePromotions()) content = <PromotionManagement />;
+  else if (pathname === "/admin/settings" && canManageSettings()) content = <SettingsManagement />;
+  else if (pathname === "/admin/diagnostics" && canViewDiagnostics()) content = <DiagnosticsManagement />;
+  return <AdminShell onLogout={() => setAuthenticated(false)}>{content}</AdminShell>;
+}
+
