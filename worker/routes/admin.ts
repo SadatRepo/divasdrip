@@ -591,6 +591,7 @@ adminRoutes.delete("/media/:id", requirePermission("media:write"), async (contex
   const media = await context.env.DB.prepare("SELECT id, object_key FROM media WHERE id = ?1").bind(mediaId).first<{ id: string; object_key: string }>();
   if (!media) return context.json({ error: "Media asset not found" }, 404);
   if (await isMediaReferenced(context.env.DB, mediaId, media.object_key)) return context.json({ error: "This media asset is still referenced by a product or storefront content" }, 409);
+  if (!context.env.IMAGES) return context.json({ error: "R2 image storage is not configured" }, 503);
   await context.env.IMAGES.delete(media.object_key);
   await context.env.DB.batch([
     context.env.DB.prepare("DELETE FROM media WHERE id = ?").bind(mediaId),

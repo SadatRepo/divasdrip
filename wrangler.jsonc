@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-store",
+  "name": "divasdrip2",
   "main": "worker/index.ts",
   "compatibility_date": "2026-09-25",
   "triggers": { "crons": ["*/15 * * * *"] },
@@ -13,15 +13,9 @@
     {
       "binding": "DB",
       "database_name": "my-store-db",
-      "database_id": "replace-with-your-cloudflare-d1-database-id",
+      "database_id": "42ad9895-f88a-4a6f-9fbb-64b7979b4535",
       "migrations_dir": "db/migrations",
       "migrations_pattern": "db/migrations/*.sql"
-    }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "IMAGES",
-      "bucket_name": "my-store-images"
     }
   ],
   "vars": {

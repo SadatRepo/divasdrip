@@ -19,7 +19,7 @@ export type Env = {
   Bindings: {
     DB: D1Database;
     ASSETS: Fetcher;
-    IMAGES: R2Bucket;
+    IMAGES?: R2Bucket;
     ADMIN_TOKEN: string;
     TURNSTILE_SECRET_KEY?: string;
     PUBLIC_TURNSTILE_SITE_KEY?: string;

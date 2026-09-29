@@ -24,6 +24,7 @@ mediaRoutes.get("/*", async (context) => {
       return new Response(transformed.body, { status: transformed.status, headers: transformedHeaders });
     }
   }
+  if (!context.env.IMAGES) return context.notFound();
   const object = await context.env.IMAGES.get(key);
   if (!object) return context.notFound();
   const headers = new Headers();

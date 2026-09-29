@@ -25,17 +25,15 @@ npm run build
 
 ## Cloudflare setup
 
-Create the remote resources, replace the placeholder D1 ID in `wrangler.jsonc`, then apply migrations:
+The client-preview Worker `divasdrip2` uses the D1 database ID in `wrangler.jsonc`. Apply migrations before deploying changes:
 
 ```powershell
 npx wrangler login
-npx wrangler d1 create my-store-db
-npx wrangler r2 bucket create my-store-images
 npm run db:migrate:remote
 npm run deploy
 ```
 
-Product image bytes go to R2. D1 stores media metadata, object keys, alt text, and product ordering. Uploads strip JPEG/PNG/WebP metadata before storage, and orphan cleanup protects product, category, collection, and homepage-content references. For responsive Cloudflare image transformations, set the optional `MEDIA_PUBLIC_BASE_URL` variable to a public media origin; when it is blank, the Worker serves the sanitized original. The payment gateway remains intentionally unconfigured; launch checkout is cash on delivery. Catalogue CSV import is available at /admin/products/import with validation preview; owner/admin exports are available from the Products and Orders screens and are audited. Authorized order staff can create manual COD orders at /admin/orders/new, including accepted preorder inquiries; the Worker snapshots the item price, applies stock policy, and records the audit trail. Collections support manual membership, tag rules, and configurable new-arrival windows.
+The preview uses bundled catalogue images and does not require R2. New admin image uploads return a storage-not-configured error. To enable uploads later, activate R2 in Cloudflare, create `my-store-images`, and restore the `IMAGES` bucket binding in `wrangler.jsonc`. With R2 enabled, product image bytes go to R2. D1 stores media metadata, object keys, alt text, and product ordering. Uploads strip JPEG/PNG/WebP metadata before storage, and orphan cleanup protects product, category, collection, and homepage-content references. For responsive Cloudflare image transformations, set the optional `MEDIA_PUBLIC_BASE_URL` variable to a public media origin; when it is blank, the Worker serves the sanitized original. The payment gateway remains intentionally unconfigured; launch checkout is cash on delivery. Catalogue CSV import is available at /admin/products/import with validation preview; owner/admin exports are available from the Products and Orders screens and are audited. Authorized order staff can create manual COD orders at /admin/orders/new, including accepted preorder inquiries; the Worker snapshots the item price, applies stock policy, and records the audit trail. Collections support manual membership, tag rules, and configurable new-arrival windows.
 ## First staff account
 
 With `ADMIN_TOKEN` configured, bootstrap the first owner account once against the local Worker:
